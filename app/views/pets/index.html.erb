@@ -1,0 +1,10 @@
+<h1>Save the Feral Animals</h1>
+
+
+<ol>
+  <% @pets.each do |pet| %>
+    <li><%= link_to pet.name, pet_path(pet) %></li>
+  <% end %>
+</ol>
+
+<%= link_to "Add Feral Animal", new_pet_path, class: "btn btn-info" %>
